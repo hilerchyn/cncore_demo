@@ -1,0 +1,520 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0022)http://www.liantu.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>在线二维码图片生成器_二维码扫描软件下载_联图二维码</title>
+        <meta name="description" content="在线二维码生成器提供免费的在线二维码生成服务，可以把电子名片、文本、wifi网络、电子邮件、短信、电话号码、网址等信息生成对应的二维码图片。二维码手机扫描软件下载。">
+        <meta name="keywords" content="二维码,二维码生成器,二维码图片,二维码是什么,手机二维码,二维码生成,二维码扫描软件,二维码识别软件,手机二维码识别软件,二维码解码器,二维码软件,手机二维码软件,二维码开放平台,二维码接口,二维码API">
+        <link href="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/base.css" type="text/css" rel="stylesheet">
+        <link href="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/index.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/sdk.js"></script>
+        <script type="text/javascript" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/iColorPicker.js"></script>
+        <script type="text/javascript" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/public.js"></script>
+        <script type="text/javascript" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/index.js"></script>
+        <script type="text/javascript" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/basefn.js"></script>
+        <script type="text/javascript" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/qrcode.js"></script>
+        <script type="text/javascript" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/canvas.js"></script>
+        <script type="text/javascript">var _speedMark = new Date();</script>
+    <script src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/share.js"></script><link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/js/page_context.js"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/slide_share.css?v=0c86db4f.css"></head>
+    <body screen_capture_injected="true">
+        <div class="top">
+            <div class="header">
+                <div class="logo">
+                    <a href="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/在线二维码图片生成器_二维码扫描软件下载_联图二维码.html"><img src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/logo.gif" alt="二维码"></a>
+                </div>
+                <div class="nav" id="nav">
+                    <a href="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/在线二维码图片生成器_二维码扫描软件下载_联图二维码.html" class="active frist"><span>二维码生成</span></a>
+                    
+                    <a href="http://www.liantu.com/tiaoma/">商品条码查询</a>
+                    
+                    <a href="http://www.liantu.com/pingtai/">二维码API</a>
+                    
+                    <a href="http://www.liantu.com/xiazai/">客户端下载</a>
+                    
+                    <div class="subnav">
+                        <a href="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/在线二维码图片生成器_二维码扫描软件下载_联图二维码.html">二维码生成</a>
+                        <a href="http://www.liantu.com/shiliang/">矢量二维码</a>
+                    </div>
+                </div>
+                <div class="navcontact">二维码QQ交流群：<span>330664490</span></div>
+            </div>
+        </div>
+    <script type="text/javascript" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/subnav.js"></script>
+        <!--<div class="adrift">
+        <a href="/xiazai/" rel="nofollow" target="_blank">联图二维码客户端<img src="/images/2013/app.png" width="90" height="90"/>点击或扫描下载</a>
+        </div>-->
+        <div class="main">
+            <div class="block">
+                <div class="left">
+                    <div class="row">
+                        <ul class="rowleft" id="fntab">
+                            <li class="active" rel="text"><a href="javascript:" class="a1" title="文本"><span>文本</span></a></li>
+                            <li rel="card"><a href="javascript:" class="a2" title="名片"><span style="display: none;">名片</span></a></li>
+                            <li rel="url"><a href="javascript:" class="a3" title="网址"><span style="display: none;">网址</span></a></li>
+                            <li rel="sms"><a href="javascript:" class="a4" title="短信"><span style="display: none;">短信</span></a></li>
+                            <li rel="wifi"><a href="javascript:" class="a5" title="WiFi"><span>WiFi</span></a></li>
+                            <li rel="telephone"><a href="javascript:" class="a6" title="电话"><span>电话</span></a></li>
+                            <li rel="mail"><a href="javascript:" class="a7" title="邮箱"><span style="display: none;">邮箱</span></a></li>
+                            <li rel="map"><a href="javascript:" class="a8" title="地图"><span>地图</span></a></li>
+                        </ul>
+                        <div class="rowright">
+
+                            <div class="fnbox" id="fnbox">
+                                <!--文本-->
+                                <div class="sub show">
+                                    <div class="tit"><span>即时输入即时生成!</span>输入文字</div>
+                                    <textarea class="text" id="text_text" autocomplete="off">支持文本、网址和电子邮箱</textarea>
+                                    <div class="size">已输入字数：<span id="text_size">4</span>/300</div>
+                                    <div class="merchant"><img src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/merchant.gif" alt="独一无二的二维码生成器网站" width="392" height="100"></div>
+                                </div>
+
+                                <!--名片-->
+                                <div class="sub">
+                                    <div class="tit"><span>即时输入即时生成!</span>输入联系人信息</div>
+                                    <ul class="card">
+                                        <li>
+                                            <label>姓名</label>
+                                            <input type="text" id="card_n" class="dinput" maxlength="50">
+                                        </li>
+                                        <li>
+                                            <label>电话</label>
+                                            <input type="text" id="card_tel" class="dinput short" maxlength="30">
+                                            <select class="type">
+                                                <option value="0">手机</option>
+                                                <option value="1">电话</option>
+                                            </select>
+                                            <div class="addelem"><a href="javascript:" id="addelem">+ 添加电话号码</a></div>
+                                        </li>
+                                        <li class="litel" id="litel">
+                                            <label>电话</label>
+                                            <input type="text" id="card_phone" class="dinput short" maxlength="30">
+                                            <select class="type">
+                                                <option value="0">手机</option>
+                                                <option value="1">电话</option>
+                                            </select>
+                                            <a href="javascript:" class="close" id="hidetel"><img src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/close.gif"></a>
+                                        </li>
+                                        <li>
+                                            <label>QQ</label>
+                                            <input type="text" id="car_note" class="dinput" maxlength="30">
+                                        </li>
+                                        <li>
+                                            <label>电子邮箱</label>
+                                            <input type="text" id="card_mail" class="dinput" maxlength="80">
+                                        </li>
+                                        <li>
+                                            <label>单位</label>
+                                            <input type="text" id="card_org" class="dinput" maxlength="100">
+                                        </li>
+                                        <li>
+                                            <label>职位</label>
+                                            <input type="text" id="card_til" class="dinput" maxlength="30">
+                                        </li>
+                                        <li>
+                                            <label>网址</label>
+                                            <input type="text" value="http://" id="card_url" class="dinput" maxlength="255">
+                                        </li>
+                                        <li>
+                                            <label>地址</label>
+                                            <input type="text" id="card_adr" class="dinput" maxlength="255">
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--网址-->
+                                <div class="sub">
+                                    <div class="tit"><span>即时输入即时生成!</span>输入URL网址</div>
+                                    <div class="urltype">
+                                        <p><span>专用链接</span><input type="checkbox" id="urloptions"></p>
+                                        <ul id="urlset">
+                                            <!--<li class="weixin"><input type="radio" name="url" rel="weixin" id="wpublic"/>公共<span><input type="radio" name="url" rel="weixin" id="wpersonal"/>个人</span></li>-->
+                                            <li class="sina"><input type="radio" name="url" rel="sina1" id="spersonal">个人<span><input type="radio" name="url" rel="sina2" id="sofficial">官微</span></li>
+                                            <li class="taobao"><input type="radio" name="url" rel="item" id="titem">商品<span><input type="radio" name="url" rel="shop" id="tshop">店铺</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="urlbox">
+                                        <input type="text" class="url" id="url_url" value="http://" maxlength="255">
+                                        <div class="size" id="msg">输入网址</div>
+                                    </div>
+                                </div>
+
+                                <!--短信-->
+                                <div class="sub">
+                                    <div class="tit"><span>即时输入即时生成!</span>输入短信内容</div>
+                                    <textarea class="sms_text" id="sms_sms"></textarea>
+                                    <div class="size">已输入数字：<span id="sms_len">0</span>/300</div>
+                                    <div class="sms">
+                                        <label>手机号码</label>
+                                        <input type="text" id="sms_tel" class="dinput" maxlength="30">
+                                    </div>
+                                </div>
+
+                                <!--WIFI-->
+                                <div class="sub">
+                                    <div class="tit"><span>即时输入即时生成!</span>输入WiFi帐号信息</div>
+                                    <ul class="card">
+                                        <li>
+                                            <label>网络账号</label>
+                                            <input type="text" id="wifi_ssid" class="dinput" maxlength="30">
+                                        </li>
+                                        <li>
+                                            <label>密码</label>
+                                            <input type="text" id="wifi_p" class="dinput" maxlength="50">
+                                        </li>
+                                        <li>
+                                            <label>加密类型</label>
+                                            <select class="wifitype" id="wifi_t">
+                                                <option value="WPA">WPA/WPA2</option>
+                                                <option value="WEP">WEP</option>
+                                                <option value="nopass">无加密</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--电话-->
+                                <div class="sub">
+                                    <div class="tit"><span>即时输入即时生成!</span>输入电话号码</div>
+                                    <div class="ininput">
+                                        <label>手机号码</label>
+                                        <input type="text" id="telephone_tel" class="dinput" maxlength="30">
+                                    </div>
+                                </div>
+
+                                <!--邮箱-->
+                                <div class="sub">
+                                    <div class="tit"><span>即时输入即时生成!</span>输入电邮地址</div>
+                                    <div class="ininput">
+                                        <label>电子邮箱</label>
+                                        <input type="text" id="mail_mail" class="dinput" maxlength="80">
+                                    </div>
+                                </div>
+
+                                <!--地图-->
+                                <div class="sub">
+                                    <div class="tit"><span>即时选择即时生成!</span>选择地理位置</div>
+                                    <div class="bdmap" id="bdmap"></div>
+                                    <input type="hidden" id="map_map" maxlength="300">
+                                </div>
+
+                            </div>
+
+                            <div class="prompt">建议内容不超过150个汉字，使低配置手机也能扫描到结果。</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="canvas-wrap">
+                        <div class="canvas">
+                            <canvas height="300" width="300" id="canvas" style="cursor: default;">
+                                <a id="pic" target="_blank" href="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/在线二维码图片生成器_二维码扫描软件下载_联图二维码.html" shorturl="/" rel="nofollow"><img id="qrcodeimg" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/liantu.png"></a>
+                            </canvas>
+                        </div>
+                    </div>
+                    <div id="diy_div" class="diy_div">
+                        <div class="diy_scroll">
+                            <div id="diy_dot" class="diy_dot" style=""></div>
+                        </div>
+                        <div class="diy_statue">
+                            <a id="resetRound1" href="javascript:">液态</a>
+                            <a id="resetRound" href="javascript:">直角</a>
+                            <a id="resetRound2" href="javascript:">圆角</a>
+                        </div>
+                    </div>
+
+                    <div class="fnrow">
+                        <div class="tab" id="tabset">
+                            <a href="javascript:" class="tabelem active">颜色设置</a>
+                            <a href="javascript:" class="tabelem">嵌入Logo</a>
+                            <a href="javascript:" class="tabelem">嵌入文字</a>
+                            <a href="javascript:" class="tabelem">图案样式</a>
+                            <a href="javascript:" class="tabelem">其它设置</a>
+                        </div>
+                        <div class="fnblock" id="fnblock">
+                            <div class="fnsubv show">
+                                <ul class="colors">
+                                    <li class="li1">
+                                        <label>前景色</label>
+                                        <div class="color">
+                                            <input id="fgcolor" name="mycolor" type="text" value="#000000" class="iColorPicker" style="background-color: rgb(0, 0, 0);"><div id="icp_fgcolor" class="colorPicker-picker" style="background-color: rgb(0, 0, 0);" onclick="iColorShow(&#39;fgcolor&#39;,&#39;icp_fgcolor&#39;);return false;"></div>
+                                        </div>
+                                    </li>
+                                    <li class="li2">
+                                        <label>渐变颜色</label>
+                                        <div class="color">
+                                            <input id="gccolor" name="mycolor" type="text" value="#000000" class="iColorPicker" style="background-color: rgb(0, 0, 0);"><div id="icp_gccolor" class="colorPicker-picker" style="background-color: rgb(0, 0, 0);" onclick="iColorShow(&#39;gccolor&#39;,&#39;icp_gccolor&#39;);return false;"></div>
+                                        </div>
+                                        <a href="javascript:" class="close" id="resetGcColor" style="display: none;"><img src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/close.gif"></a>
+                                    </li>
+                                    <li class="li3">
+                                        <label>定位点(外框)</label>
+                                        <div class="color">
+                                            <input id="ptcolor" name="mycolor" type="text" value="#000000" class="iColorPicker" style="background-color: rgb(0, 0, 0);"><div id="icp_ptcolor" class="colorPicker-picker" style="background-color: rgb(0, 0, 0);" onclick="iColorShow(&#39;ptcolor&#39;,&#39;icp_ptcolor&#39;);return false;"></div>
+                                        </div>
+                                        <a href="javascript:" class="close" id="resetPtColor" style="display: none;"><img src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/close.gif"></a>
+                                    </li>
+
+                                    <li class="li4">
+                                        <label>背景色</label>
+                                        <div class="color">
+                                            <input id="bgcolor" name="mycolor" type="text" value="#ffffff" class="iColorPicker" style="background-color: rgb(255, 255, 255);"><div id="icp_bgcolor" class="colorPicker-picker" style="background-color: rgb(255, 255, 255);" onclick="iColorShow(&#39;bgcolor&#39;,&#39;icp_bgcolor&#39;);return false;"></div>
+                                        </div>
+                                    </li>
+                                    <li class="li5">
+                                        <label>渐变方式</label>
+                                        <select id="gradientWay">
+                                            <option value="0">无</option>
+                                            <option value="circular">圆形</option>
+                                            <option value="backslash" selected="selected">反斜线</option>
+                                            <option value="slash">斜线</option>
+                                            <option value="horizontal">水平</option>
+                                            <option value="vertical">垂直</option>
+                                        </select>
+                                    </li>
+                                    <li class="li6">
+                                        <label>定位点(内点)</label>
+                                        <div class="color">
+                                            <input id="inptcolor" name="mycolor" type="text" value="#000000" class="iColorPicker" style="background-color: rgb(0, 0, 0);"><div id="icp_inptcolor" class="colorPicker-picker" style="background-color: rgb(0, 0, 0);" onclick="iColorShow(&#39;inptcolor&#39;,&#39;icp_inptcolor&#39;);return false;"></div>
+                                        </div>
+                                        <a href="javascript:" class="close" id="resetInPtColor" style="display: none;"><img src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/close.gif"></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="fnsubv">
+                                <div class="logotypes" id="logotypes">
+                                    <label>圆角<input type="radio" name="logotype" value="icon"></label>
+                                    <label>白底<input type="radio" name="logotype" value="border"></label>
+                                    <label>描边<input type="radio" name="logotype" value="stroke"></label>
+                                    <label>原图<input type="radio" name="logotype" value="default" checked="checked"></label>
+                                </div>
+                                <div class="pic">
+                                    <span class="picbtn">
+                                        <div class="addpic">
+                                            <form action="http://www.liantu.com/upload.php" method="post" target="oniframe" id="logoform" enctype="multipart/form-data">
+                                                <input type="file" id="logoimg" class="addlogo" name="logo">
+                                            </form>
+                                            <iframe name="oniframe" class="iframe" id="iframe" height="0" width="0" frameborder="0"></iframe>
+                                        </div>
+                                    </span>
+                                    <div class="picelem" id="picelem" style="display: none;"><span></span><a href="javascript:" class="del" title="删除" id="resetLogoimg"></a></div>
+                                </div>
+                                <div class="format" id="format">（支持jpg、gif、png、bmp格式图片，不超过20M）</div>
+                                <div class="turn" id="turn"><span class="turn1" title="逆时针旋转"></span><span class="turn2" title="顺时针旋转"></span></div>
+                            </div>
+
+                            <div class="fnsubv">
+                                <div class="content">
+                                    <input class="ctext" id="ctext" type="text" value="输入文本">
+                                    <input class="cbutton" id="cbutton" type="button" value="确定">
+                                    <a href="javascript:" class="del" title="删除" id="resetContent"></a>
+                                </div>
+                                <ul class="fontset">
+                                    <li>
+                                        <label>效果</label>
+                                        <select id="fonteffect">
+                                            <option selected="selected" value="default">描边</option>
+                                            <option value="in">内融合</option>
+                                            <option value="out">外融合</option>
+                                            <option value="stretch">拉伸</option>
+                                            <option value="3d">3D效果</option>
+                                            <option value="light">发光</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label>字号</label>
+                                        <select id="fontsize">
+                                            <option value="24">24</option>
+                                            <option value="26">26</option>
+                                            <option selected="selected" value="28">28</option>
+                                            <option value="30">30</option>
+                                            <option value="32">32</option>
+                                            <option value="34">34</option>
+                                            <option value="36">36</option>
+                                            <option value="38">38</option>
+                                        </select>
+                                    </li>
+                                    <li class="i3">
+                                        <label>文字颜色</label>
+                                        <div class="color">
+                                            <input id="ftcolor" name="mycolor" type="text" value="#000000" class="iColorPicker" style="background-color: rgb(0, 0, 0);"><div id="icp_ftcolor" class="colorPicker-picker" style="background-color: rgb(0, 0, 0);" onclick="iColorShow(&#39;ftcolor&#39;,&#39;icp_ftcolor&#39;);return false;"></div>
+                                        </div>
+                                        <a href="javascript:" class="close" id="resetFtColor" style="display: none;"><img src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/close.gif"></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="fnsubv">
+                                <div class="pin">
+                                    <div class="pin-trigger" id="pin-trigger">定位点样式</div>
+                                </div>
+                            </div>
+
+                            <div class="fnsubv">
+                                <ul class="baseset">
+                                    <li>
+                                        <label>外边距</label>
+                                        <select id="margin">
+                                            <option>0px</option>
+                                            <option>5px</option>
+                                            <option selected="selected">10px</option>
+                                            <option>15px</option>
+                                            <option>20px</option>
+                                            <option>25px</option>
+                                            <option>30px</option>
+                                            <option>35px</option>
+                                            <option>40px</option>
+                                            <option>45px</option>
+                                            <option>50px</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label>纠错等级</label>
+                                        <select id="level">
+                                            <option value="L">最低</option>
+                                            <option value="M">低</option>
+                                            <option value="Q">中等</option>
+                                            <option value="H">高</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label>旋转角度</label>
+                                        <select id="rotate">
+                                            <option value="0" selected="selected">0°</option>
+                                            <option value="1">90°</option>
+                                            <option value="2">180°</option>
+                                            <option value="3">270°</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label>图片大小</label>
+                                        <select id="size">
+                                            <option value="200">200px</option>
+                                            <option value="300" selected="selected">300px</option>
+                                            <option value="500">500px</option>
+                                            <option value="600">600px</option>
+                                            <option value="800">800px</option>
+                                            <option value="1000">1000px</option>
+                                            <option value="1500">1500px</option>
+                                            <option value="2000">2000px</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other">
+                        <div class="save">
+                            <form action="http://www.liantu.com/save.php" method="post" target="_blank" id="form">
+                                <input type="hidden" name="data" value="" id="pngdata">
+                                <input type="hidden" name="format" value="base64">
+                                <input type="hidden" name="filename" value="liantu.png">
+                                <a href="javascript:void(0);" id="savepng">保存图片</a>
+                            </form>
+                        </div>
+                        <div class="reset-all" id="resetAll"><a href="javascript:">清除设置</a></div>
+                        <div class="copy" id="copy" style="display: none;">
+                            <a href="javascript:">复制图片链接</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="picbox">
+                <div class="pictit"><span><a href="http://www.liantu.com/zhishi/2013030948.html" target="_blank">二维码图片美化教程</a></span>网络原创创意二维码生成效果展示，从来高手都来自民间！</div>
+                <ul class="pics">
+                    <li><img src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/1.jpg" alt="原创二维码展示1" width="180" height="180"></li>
+                    <li><img src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/2.jpg" alt="原创二维码展示2" width="180" height="180"></li>
+                    <li><img src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/3.jpg" alt="个性二维码展示3" width="180" height="180"></li>
+                    <li><img src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/4.jpg" alt="个性二维码展示4" width="180" height="180"></li>
+                    <li><img src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/5.jpg" alt="个性二维码展示5" width="180" height="180"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="link">
+            <span>友情链接：</span>
+            <a href="http://www.3533.com/" target="_blank">手机</a>
+            <a href="http://a.3533.com/" target="_blank">安卓应用</a>
+            <a href="http://game.3533.com/" target="_blank">手机应用</a>
+            <a href="http://www.ip138.com/" target="_blank">IP138实用查询</a>
+            <a href="http://www.yanwenzi.com/" target="_blank">颜文字</a>
+            <a href="http://www.haobizhi.com/" target="_blank">好壁纸</a>
+            <a href="http://www.xuanbiaoqing.com/" target="_blank">炫表情</a>
+            <a href="http://www.haolingsheng.com/" target="_blank">好铃声</a>
+            <a href="http://www.xuancaizi.com/" target="_blank">炫彩字</a>
+            <a href="http://www.nixiba.com/" target="_blank">逆袭吧</a>
+            <a href="http://www.dashi.com/" target="_blank">安卓刷机</a>
+            <a href="http://www.youba.com/" target="_blank">游吧</a>
+            <a href="http://cli.im/" target="_blank">二维码生成器</a>
+            <a href="http://www.yy138.com/" target="_blank">苹果应用</a>
+            <a href="http://www.qqbiaoqing.com/" target="_blank">QQ表情</a>
+            <a href="http://www.oicq88.com/" target="_blank">QQ网名</a>
+            <a href="http://gexingqianming.oicq88.com/" target="_blank">QQ个性签名</a>
+            <a href="http://you.3533.com/" target="_blank">手机网游</a>
+            <a href="http://www.seovip.cn/" target="_blank">seo培训</a>
+            <a href="http://game.3533.com/ruanjian/" target="_blank">手机软件</a>
+            <a href="http://www.gongju.com/" target="_blank">站长工具</a>
+            <a href="http://www.xpgod.com/" target="_blank">软件下载</a>
+            <a href="http://seo.aizhan.com/" target="_blank">seo培训</a>
+            <a href="http://ditu.cncn.com/" target="_blank">电子地图</a>
+            <a href="http://www.meitu.com/" target="_blank">美图手机</a>
+            <a href="http://www.fantizi5.com/" target="_blank">繁体字转换器</a>
+            <a href="http://www.xpgod.com/" target="_blank">软件下载天堂</a>
+            <a href="http://www.pc0359.cn/" target="_blank">河东软件园</a>
+            <a href="http://www.dajiazhao.com/" target="_blank">免费八字算命</a>
+            <a href="http://www.wannianli.com.cn/" target="_blank">万年历</a>
+            <a href="http://www.leawo.cn/" target="_blank">狸窝</a>
+            <a href="http://www.geren-jianli.com/" target="_blank">简历模板</a>
+            <a href="http://www.startos.com/" target="_blank">系统门户</a>
+            <a href="http://www.appvv.com/" target="_blank">维维网</a>
+        </div>
+        <script type="text/javascript">
+            <!--
+            defalutText($('#text_text'), '支持文本、网址和电子邮箱');
+            changeWifi();
+            tabfn($('#fntab li'), $('#fnbox .sub'));
+            fixtaba($('#fntab a'), $('#fntab li'));
+            tabfn($('#tabset .tabelem'), $('#fnblock .fnsubv'));
+            elemfocus($('#fnbox .dinput,#url_url,#text_text,#sms_sms'));
+            elemSwitch($('#addelem'), $('#litel'));
+            openmore($('#urloptions'), $('#urlset'));
+            addpic($('#logoimg'), $('#picelem'), $('#turn'), $('#format'));
+            hideelem($('#hidetel'), $('#litel'), $('#addelem'), function() {
+                $('#card_phone').val('');
+            });
+            urlselect();
+            $(document).ready(function() {
+                resetAll();
+            });
+//-->
+        </script>
+        <div id="apiUrl" class="hide"></div>
+        <div id="apiText" class="hide" title="sdaf"></div>
+        <div class="pin-panel" id="pin-panel">
+            <span></span>
+            <ul>
+                <li class="i1 active"></li><li class="i2"></li><li class="i3"></li><li class="i4"></li><li class="i5"></li><li class="i6"></li>
+                <li class="i7"></li><li class="i8"></li><li class="i9"></li><li class="i10"></li><li class="i11"></li><li class="i12"></li>
+                <li class="i13"></li><li class="i14"></li><li class="i15"></li><li class="i16"></li><li class="i17"></li><li class="i18"></li>
+                <li class="i19"></li><li class="i20"></li><li class="i21"></li><li class="i22"></li>
+            </ul>
+        </div>
+        <script type="text/javascript" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/api"></script><script type="text/javascript" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/getscript"></script>
+        <script type="text/javascript" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/html5.js"></script>
+        <script type="text/javascript" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/ie.js"></script>
+        <script type="text/javascript">
+        <!--
+        window._bd_share_config = {"common": {"bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16"}, "slide": {"type": "slide", "bdImg": "6", "bdPos": "right", "bdTop": "310"}};
+        with (document)
+            0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+//-->
+        </script>
+        <div class="footer">
+<a href="http://www.miitbeian.gov.cn/" taget="_blank" rel="nofollow">粤ICP备11063993号-2</a><br>
+Copyright © 2013 liantu.com, All Rights Reserved stat 
+<script type="text/javascript" charset="UTF-8" src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/stat.php"></script><img src="./在线二维码图片生成器_二维码扫描软件下载_联图二维码_files/log.php" alt="http://www.kutongji.com/report/?siteid=38" width="1" height="1" border="0">
+</div>
+    
+
+<iframe id="icp_iframe" width="253" height="155" scrolling="no" frameborder="0" style="z-index:99;display:none;background:#f00;"></iframe><div id="iColorPicker" style="display: none; border: 1px solid rgb(204, 204, 204); background-color: rgb(51, 51, 51); padding: 5px; color: rgb(255, 255, 255); z-index: 9999; background-position: initial initial; background-repeat: initial initial;"><table class="pickerTable" id="pickerTable0" style="border-collapse: collapse;"><thead id="hexSection0"><tr><td style="background-color: rgb(255, 0, 0); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="f00"></td><td style="background-color: rgb(255, 255, 0); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="ff0"></td><td style="background-color: rgb(0, 255, 0); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="0f0"></td><td style="background-color: rgb(0, 255, 255); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="0ff"></td><td style="background-color: rgb(0, 0, 255); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="00f"></td><td style="background-color: rgb(255, 0, 255); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="f0f"></td><td style="background-color: rgb(255, 255, 255); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="fff"></td><td style="background-color: rgb(235, 235, 235); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="ebebeb"></td><td style="background-color: rgb(225, 225, 225); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="e1e1e1"></td><td style="background-color: rgb(215, 215, 215); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="d7d7d7"></td><td style="background-color: rgb(204, 204, 204); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="cccccc"></td><td style="background-color: rgb(194, 194, 194); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="c2c2c2"></td><td style="background-color: rgb(183, 183, 183); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="b7b7b7"></td><td style="background-color: rgb(172, 172, 172); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="acacac"></td><td style="background-color: rgb(160, 160, 160); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="a0a0a0"></td><td style="background-color: rgb(149, 149, 149); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="959595"></td></tr><tr><td style="background-color: rgb(238, 29, 36); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="ee1d24"></td><td style="background-color: rgb(255, 241, 0); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="fff100"></td><td style="background-color: rgb(0, 166, 80); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="00a650"></td><td style="background-color: rgb(0, 174, 239); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="00aeef"></td><td style="background-color: rgb(47, 49, 146); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="2f3192"></td><td style="background-color: rgb(237, 0, 140); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="ed008c"></td><td style="background-color: rgb(137, 137, 137); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="898989"></td><td style="background-color: rgb(125, 125, 125); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="7d7d7d"></td><td style="background-color: rgb(112, 112, 112); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="707070"></td><td style="background-color: rgb(98, 98, 98); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="626262"></td><td style="background-color: rgb(85, 85, 85); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="555"></td><td style="background-color: rgb(70, 70, 70); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="464646"></td><td style="background-color: rgb(54, 54, 54); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="363636"></td><td style="background-color: rgb(38, 38, 38); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="262626"></td><td style="background-color: rgb(17, 17, 17); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="111"></td><td style="background-color: rgb(0, 0, 0); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="000"></td></tr><tr><td style="background-color: rgb(247, 151, 122); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="f7977a"></td><td style="background-color: rgb(251, 173, 130); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="fbad82"></td><td style="background-color: rgb(253, 198, 140); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="fdc68c"></td><td style="background-color: rgb(255, 247, 153); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="fff799"></td><td style="background-color: rgb(198, 223, 156); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="c6df9c"></td><td style="background-color: rgb(164, 212, 157); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="a4d49d"></td><td style="background-color: rgb(129, 202, 157); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="81ca9d"></td><td style="background-color: rgb(123, 205, 201); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="7bcdc9"></td><td style="background-color: rgb(108, 207, 247); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="6ccff7"></td><td style="background-color: rgb(124, 166, 216); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="7ca6d8"></td><td style="background-color: rgb(130, 147, 202); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="8293ca"></td><td style="background-color: rgb(136, 129, 190); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="8881be"></td><td style="background-color: rgb(162, 134, 189); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="a286bd"></td><td style="background-color: rgb(188, 140, 191); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="bc8cbf"></td><td style="background-color: rgb(244, 155, 193); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="f49bc1"></td><td style="background-color: rgb(245, 153, 157); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="f5999d"></td></tr><tr><td style="background-color: rgb(241, 108, 77); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="f16c4d"></td><td style="background-color: rgb(246, 142, 84); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="f68e54"></td><td style="background-color: rgb(251, 175, 90); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="fbaf5a"></td><td style="background-color: rgb(255, 244, 103); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="fff467"></td><td style="background-color: rgb(172, 211, 114); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="acd372"></td><td style="background-color: rgb(125, 196, 115); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="7dc473"></td><td style="background-color: rgb(57, 183, 120); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="39b778"></td><td style="background-color: rgb(22, 188, 180); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="16bcb4"></td><td style="background-color: rgb(0, 191, 243); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="00bff3"></td><td style="background-color: rgb(67, 140, 203); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="438ccb"></td><td style="background-color: rgb(85, 115, 183); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="5573b7"></td><td style="background-color: rgb(94, 92, 167); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="5e5ca7"></td><td style="background-color: rgb(133, 95, 168); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="855fa8"></td><td style="background-color: rgb(167, 99, 169); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="a763a9"></td><td style="background-color: rgb(239, 110, 168); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="ef6ea8"></td><td style="background-color: rgb(241, 109, 126); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="f16d7e"></td></tr><tr><td style="background-color: rgb(238, 29, 36); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="ee1d24"></td><td style="background-color: rgb(241, 101, 34); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="f16522"></td><td style="background-color: rgb(247, 148, 29); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="f7941d"></td><td style="background-color: rgb(255, 241, 0); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="fff100"></td><td style="background-color: rgb(143, 198, 61); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="8fc63d"></td><td style="background-color: rgb(55, 180, 74); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="37b44a"></td><td style="background-color: rgb(0, 166, 80); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="00a650"></td><td style="background-color: rgb(0, 169, 158); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="00a99e"></td><td style="background-color: rgb(0, 174, 239); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="00aeef"></td><td style="background-color: rgb(0, 114, 188); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="0072bc"></td><td style="background-color: rgb(0, 84, 165); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="0054a5"></td><td style="background-color: rgb(47, 49, 146); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="2f3192"></td><td style="background-color: rgb(101, 44, 145); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="652c91"></td><td style="background-color: rgb(145, 39, 143); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="91278f"></td><td style="background-color: rgb(237, 0, 140); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="ed008c"></td><td style="background-color: rgb(238, 16, 90); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="ee105a"></td></tr><tr><td style="background-color: rgb(157, 10, 15); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="9d0a0f"></td><td style="background-color: rgb(161, 65, 13); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="a1410d"></td><td style="background-color: rgb(163, 98, 9); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="a36209"></td><td style="background-color: rgb(171, 160, 0); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="aba000"></td><td style="background-color: rgb(88, 133, 40); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="588528"></td><td style="background-color: rgb(25, 123, 48); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="197b30"></td><td style="background-color: rgb(0, 114, 54); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="007236"></td><td style="background-color: rgb(0, 115, 106); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="00736a"></td><td style="background-color: rgb(0, 118, 164); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="0076a4"></td><td style="background-color: rgb(0, 74, 128); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="004a80"></td><td style="background-color: rgb(0, 51, 112); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="003370"></td><td style="background-color: rgb(29, 19, 99); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="1d1363"></td><td style="background-color: rgb(69, 14, 97); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="450e61"></td><td style="background-color: rgb(98, 5, 95); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="62055f"></td><td style="background-color: rgb(158, 0, 92); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="9e005c"></td><td style="background-color: rgb(157, 0, 57); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="9d0039"></td></tr><tr><td style="background-color: rgb(121, 0, 0); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="790000"></td><td style="background-color: rgb(123, 48, 0); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="7b3000"></td><td style="background-color: rgb(124, 73, 0); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="7c4900"></td><td style="background-color: rgb(130, 122, 0); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="827a00"></td><td style="background-color: rgb(62, 102, 23); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="3e6617"></td><td style="background-color: rgb(4, 95, 32); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="045f20"></td><td style="background-color: rgb(0, 88, 36); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="005824"></td><td style="background-color: rgb(0, 89, 81); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="005951"></td><td style="background-color: rgb(0, 91, 126); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="005b7e"></td><td style="background-color: rgb(0, 53, 98); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="003562"></td><td style="background-color: rgb(0, 32, 86); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="002056"></td><td style="background-color: rgb(12, 0, 75); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="0c004b"></td><td style="background-color: rgb(48, 0, 74); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="30004a"></td><td style="background-color: rgb(75, 0, 72); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="4b0048"></td><td style="background-color: rgb(122, 0, 69); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="7a0045"></td><td style="background-color: rgb(122, 0, 38); width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background-position: initial initial; background-repeat: initial initial;" hx="7a0026"></td></tr></thead><tbody><tr><td style="border: 1px solid rgb(0, 0, 0); background-color: rgb(255, 255, 255); cursor: pointer; height: 50px; width: 12px; background-position: initial initial; background-repeat: initial initial;" colspan="16" align="center" id="colorPreview"><input type="text" maxlength="7" size="8" style="color:#000;border:1px solid rgb(0, 0, 0);padding:5px;background-color:#fff;font:11px Arial, Helvetica, sans-serif;"></td></tr></tbody></table><style>#iColorPicker input{margin:2px}</style></div><div id="iColorPickerBg"></div><div class="bdshare-slide-button-box bdshare-slide-style-r6" style="top: 310px; width: 0px; right: 0px;" data-bd-bind="1392713645666"><a href="http://www.liantu.com/#" onclick="return false;" class="bdshare-slide-button" style="left: -24px;"></a><div class="bdshare-slide-list-box" style="width: 0px; display: none;"><div class="bdshare-slide-top">分享到</div><div class="bdshare-slide-list"><ul class="bdshare-slide-list-ul" style="width: 226px;"></ul></div><div class="bdshare-slide-bottom" style="width: 226px;"><a href="http://www.liantu.com/#" onclick="return false;" class="slide-more" data-cmd="more">更多...</a></div></div></div></body></html>
