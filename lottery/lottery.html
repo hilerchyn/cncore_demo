@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-Type" content="text/html;charset=utf-8">
+            <meta name="keywords" content="cncore.com" />
+            <meta name="description" content="cncore.com, by Hiler Chen, hilerchyn@gmail.com" />
+            <title>网页特效 有趣的抽奖效果</title>
+            <style type="text/css">
+                *{ padding:0px; margin:0px auto}
+                #showPart{ border-top:100px solid #fff; border-bottom:50px solid #fff; text-align:center}
+                #ctrl{ text-align:center}
+                #selectedPart{border-top:30px solid #fff;}
+                td{ background:#CCFFCC; width:25%;}
+            </style>
+            <script type="text/javascript">
+                var number = new Array();//号码数组
+                //生成号码
+                for (var i = 0; i < 12; i++) {
+                    var j = "0" + i;
+                    if (4 - j.length == 2) {
+                        number[i] = "00" + j
+                    } else if (4 - j.length == 1) {
+                        number[i] = "0" + j
+                    } else {
+                        number[i] = j
+                    }
+                    //alert(number[i])
+                    //alert(number.length+"         "+number)
+                }//结束生成
+                //数组内容乱序
+                for (var i = 0; i < 100; i++) {
+                    number.sort(function() {
+                        return 0.5 - Math.random()
+                    })
+                }//结束
+                var state = 0;//开始与停止状态  0/1  开始/停止
+                var jishu = 0;//数组计数器索引
+                var setInt;
+                var tdid = 0;//表格的id索引
+                var liandian = 1;//是否连续点击同一按钮
+                function start(x) {
+                    state = x;
+                    if (state == 0) {
+                        if (tdid > 11 || liandian == 0) {
+                            return false
+                        }//如果连续点击 或者最后一个td已被填充  停止
+                        liandian = 0;
+                        setInt = setInterval("as()", 10)
+                    } else {
+                        if (tdid > 12 || liandian == 1) {
+                            return false
+                        }
+                        tdid++
+                        var id = "sp" + tdid;
+                        document.getElementById(id).innerHTML = number[jishu - 1];
+                        number.splice(jishu - 1, 1);
+                        jishu = 0;
+                        liandian = 1;
+                        //alert(number.length+"         "+number)
+                    }
+                }//欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+                function as() {
+                    if (state == 1) {
+                        clearInterval(setInt);//停止
+                    } else {
+                        jishu == number.length ? jishu = 0 : jishu = jishu;//判断是不是大于数组的长度  y置零
+                        document.getElementById('showPart').innerHTML = number[jishu];
+                        jishu++;
+                    }
+                }//欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+            </script>
+    </head>
+    <body>
+
+        <div id="showPart">中奖号码</div>
+        <div id="ctrl">
+            <a onclick="start(0)" style="cursor:pointer">开始</a>
+            <a onclick="start(1)" style="cursor:pointer">停止</a>
+        </div>
+        <table width="924" border="1" cellspacing="1" cellpadding="1" id="selectedPart">
+            <tr>
+                <td id="sp1"> </td>
+                <td id="sp2"> </td>
+                <td id="sp3"> </td>
+                <td id="sp4"> </td>
+            </tr>
+            <tr>
+                <td id="sp5"> </td>
+                <td id="sp6"> </td>
+                <td id="sp7"> </td>
+                <td id="sp8"> </td>
+            </tr>
+            <tr>
+                <td id="sp9"> </td>
+                <td id="sp10"> </td>
+                <td id="sp11"> </td>
+                <td id="sp12"> </td>
+            </tr>
+        </table>
+    </body>
+</html>
