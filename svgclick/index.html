@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Demo</title>
+        <script src="./jquery-1.4.2.min.js"  type="text/javascript"></script>
+        <script type='text/javascript' src='./jquery.svg.min.js'></script>
+        <script type="text/javascript">
+        /*function resetSize(svg, width, height) {
+            svg.configure({ width: width || $(svg._container).width(),
+                height: height || $(svg._container).height()
+            });
+        }*/
+        function onLoad(svg, error) {
+            //svg.text(10, 20, error || 'Loaded into ' + this.id);
+            //resetSize(svg, null, null); //'100%', '100%');
+            
+            
+            $('g#layer1').click(function() {
+                alert('clicked star');
+            });
+            $('g#layer2').click(function() {
+                alert('clicked fiveside');
+            });
+            $('g#layer3').click(function() {
+                alert('clicked custom');
+            });
+            $('g#layer4').click(function() {
+                alert('clicked nofill');
+            });
+        }
+
+        $(function() {
+            $('#layout').svg({});
+
+            var svg = $('#layout').svg('get');
+            svg.load('drawing.svg', {
+                addTo: false,
+                changeSize: false,
+                onLoad: onLoad
+            });
+        });
+
+        </script>
+    </head>
+    <body>
+        <div id="layout" style="width: 920px; height:940px;"></div>
+    </body>
+
+</html>
