@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://xiechengxiong.com/168.html -->
+<html lang="zh-CN" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>JS拼图游戏</title>
+	<meta name="alexaVerifyID" content="gOLR_lcxLwzo-HzV4Vx5FcFfFdk">
+
+	<meta name="description" content=" ...">
+	<meta name="keywords" content="">
+    
+	<meta name="author" content="HilerChen" >
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ 
+	<!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" type="text/css" media="all" href="./files/style.css">
+    <!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" media="all" href="http://xiechengxiong.com/wp-content/themes/Workality-Lite-master/style_ie.css" />
+	<![endif]-->
+  
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+		
+    <!-- Head End
+  ================================================== -->
+    
+<script type="text/javascript" src="./files/modernizr.js"></script>
+<script type="text/javascript" src="./files/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="./files/include.js"></script>
+<meta name="generator" content="Bluefish 2.2.5" >
+    
+<script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/js/page_context.js"></script>
+</head>
+ 
+ <body class="single single-post postid-168 single-format-standard" screen_capture_injected="true">
+	<div class="container">
+    
+	<div id="singlecontent">
+      
+
+        
+<br class="clear">
+
+<div class="row blogpage fitvids">
+	<div class="sixteen columns">
+                   <div class="post-168 post type-post status-publish format-standard has-post-thumbnail hentry category-htmlcss category-js blogpost blogpost_single border-color showajaxcontent end">
+                   
+                    <h3>S拼图游戏</h3>
+                    <div class="title border-color">
+                      					    <strong>分类 :</strong> <a href="http://xiechengxiong.com/category/htmlcss" title="查看html+css中的全部文章">html+css</a>, <a href="http://xiechengxiong.com/category/js" title="查看Javascript中的全部文章">Javascript</a> 
+					  	 · by <a href="http://xiechengxiong.com/author/admin" title="由冷月无声发布" rel="author">冷月无声</a>                      
+                        <span class="datetime">
+                          2013年6月3日                        </span>
+                                          </div>
+                      <div class="thecontent">	
+							<p>周末在家闲的无聊，于是自己写了一个游戏自己玩，结果自己做的游戏自己都玩不过去，哎，整的我测试都挺麻烦的。</p>
+<p>我在网上看到很多类型的拼图游戏，说实话挺佩服的，不过我自己看了他们的实现方式，</p>
+<p>所有的图片都是经过图片工具处理后被提前分割为很多张图片，这不仅造成了图片加载的延迟，同时也造成了不好的用户体验。</p>
+<p>我想了很多方法，能不能在一张图片上下文章呢，于是我想到了css图片裁剪。</p>
+<p>css中有个叫clip的属性，是用来截取规定范围内的图片区域，于是我就以此为基础开始了我的游戏构建之旅。</p>
+<p>首先，我把一张图片通过clip依次裁剪为9份（注意不是真的裁剪哦！）。</p>
+<p>[code lang="js"]<br>
+var tl = [];<br>
+            for(var i = 0; i &lt; 9; i++) {<br>
+                var img = doc.createElement('img');<br>
+                var p = this.getPos(i);<br>
+                img.id = i +'';<br>
+                img.src = 'photos/1.jpg';<br>
+                img.style.width = '300px';<br>
+                img.style.height = '300px';<br>
+                img.style.clip = 'rect('+ p[0] +'px,'+ p[1] +'px,'+ p[2] +'px,'+ p[3] +'px)';<br>
+                img.style.marginLeft = -p[3] +'px';<br>
+                img.style.marginTop = -p[0] +'px';<br>
+                tl.push(img);<br>
+            }</p>
+<p>getPos: function(i) {<br>
+            if(i === 8) {<br>
+                return [0, 0, 0, 0];<br>
+            }<br>
+            var p = [];<br>
+            p[0] = 100 * parseInt(i/3);<br>
+            p[1] = 100 * (i%3) + 100;<br>
+            p[2] = p[0] + 100;<br>
+            p[3] = p[1] - 100;<br>
+            return p;<br>
+        }<br>
+[/code]</p>
+<p>接着将他们随机排列安排到9个方格中，其中最后一个图片碎片扔掉当作空白格。</p>
+<p>[code lang="js"]<br>
+getRandom: function(arr) {<br>
+            var tArr = [];<br>
+            var len = arr.length;<br>
+            for (var i = 0; i &lt; len; i++) {<br>
+                var r = Math.floor(Math.random()*arr.length);<br>
+                if(arr[r].id === '8') {<br>
+                    sIndex = i;<br>
+                }<br>
+                arr[r].title = i;<br>
+                tArr[i] = arr[r];<br>
+                arr.splice(r, 1);<br>
+            }<br>
+            return tArr;<br>
+        }<br>
+[/code]</p>
+<p>界面构造完成之后，接下来就应该添加监听事件了，这里主要监控图片方格的点击事件</p>
+<p>要是图片方格移动，则必须其周围要有空白格，其中判断空白格及移动方格的方法如下：</p>
+<p>[code lang="js"]<br>
+var i = parseInt(target.title);<br>
+                    var p = sIndex - i;//sIndex为空白格位置索引，i为被点击的图片方格索引<br>
+                    if(i !== sIndex &amp;&amp; ((p === 1 &amp;&amp; sIndex % 3 !== 0) || (p === -1 &amp;&amp; i % 3 !== 0) || Math.abs(p) === 3)) {<br>
+                        steps++;<br>
+                        _this.opts.changeHandler &amp;&amp; _this.opts.changeHandler(steps);<br>
+                        _this.changePos(i);<br>
+                    }</p>
+<p>changePos: function(i) {<br>
+            var iImg = list[i];<br>
+            var sImg = list[sIndex];<br>
+            var id = sImg.id;<br>
+            sImg.title = sIndex;<br>
+            sImg.id = iImg.id;<br>
+            sImg.style.clip = iImg.style.clip;<br>
+            sImg.style.marginLeft = iImg.style.marginLeft;<br>
+            sImg.style.marginTop = iImg.style.marginTop;<br>
+            iImg.title = i;<br>
+            iImg.id = id;<br>
+            iImg.style.clip = 'rect(0, 0, 0, 0)';<br>
+            iImg.style.marginLeft = '0px';<br>
+            iImg.style.marginTop = '0px';<br>
+            sIndex = i;<br>
+            this.isSuccess();<br>
+        }<br>
+[/code]</p>
+<p>以上步骤完成之后，可以说我的拼图游戏已经基本完成了，只剩下最后一步，那就是怎样判断成功呢？</p>
+<p>其实在构造图片图片碎片的时候，我就在每个图片的dom对象上种上了它的正确位置，标记在了id上，然后标记了随机位置在title上。</p>
+<p>判断成功的时候，依次判断9个方格的title和id是否相等，如果全部相等，则表示拼图成功了。</p>
+<p>具体效果如下：</p>
+<p><iframe src="./files/jigsaw.html" height="550" width="90%" frameborder="0" scrolling="no"></iframe></p>
+                   	  </div>
+                      <div class="bottom">
+                        <span class="loop-tags">
+                                                </span>
+					  </div>
+                   </div>
+		                   
+    </div>
+
+            </div>   
+        
+</div>  
+
+        
+        
+    </div> 
+
+    
+
+</body></html>

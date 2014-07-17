@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery小图/内部图片放大镜特效 - 站长素材</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<style type="text/css">
+*{margin:0px;padding:0;list-style-type:none;}
+body{background:#E9F0F5;font-family:Arial, Helvetica, sans-serif;font-size:13px;margin:0px;padding:0px;}
+html{background-color:#E9F0F5;}
+img{border:none;}
+h3{font-family:Tahoma, Geneva, sans-serif;font-size:14px;color:#333;letter-spacing:1px;margin-top:10px;margin-bottom:10px;}
+p{margin-bottom:10px;margin-top:10px;line-height:22px;}
+.demo{margin:0 auto;width:600px;}
+.tickul li{line-height:24px;}
+/* zoom-section */
+.zoom-section{clear:both;margin-top:20px;}
+*html .zoom-section{display:inline;clear:both;}
+.zoom-desc{float:left;margin-left:10px;width:310px;margin-bottom:20px;}
+.zoom-small-image{border:4px solid #CCC;float:left;margin-bottom:20px;}
+.zoom-tiny-image{border:1px solid #CCC;margin:0px;}
+.zoom-tiny-image:hover{border:1px solid #C00;}
+</style>
+<link href="css/cloud-zoom.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/cloud-zoom.1.0.2.min.js"></script>
+<div class="demo">
+
+	<div class="zoom-section">    	  
+		<div class="zoom-small-image">
+			<a href='images/bigimage00.jpg' class = 'cloud-zoom' id='zoom1' rel="adjustX:10, adjustY:-4"><img src="images/smallimage.jpg" alt='' title="Optional title display" /></a></div>
+		<div class="zoom-desc">
+			<h3></h3>       
+			<p><a href='images/bigimage00.jpg' class='cloud-zoom-gallery' title='Red' rel="useZoom: 'zoom1', smallImage: 'images/smallimage.jpg' "><img class="zoom-tiny-image" src="images/tinyimage.jpg" alt = "Thumbnail 1"/></a>
+			
+			<a href='images/bigimage01.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: ' images/smallimage-1.jpg'"><img class="zoom-tiny-image" src="images/tinyimage-1.jpg" alt = "Thumbnail 2"/></a>                  
+			<a href='images/bigimage02.jpg' class='cloud-zoom-gallery' title='Blue' rel="useZoom: 'zoom1', smallImage: 'images/smallimage-2.jpg' "><img class="zoom-tiny-image" src="images/tinyimage-2.jpg" alt = "Thumbnail 3"/></a></p>
+
+	</div>
+	</div><!--zoom-section end-->
+    
+
+  
+	
+    
+<div class="zoom-section">
+		<div class="zoom-small-image">
+			<a href='images/bigimage03.jpg' class='cloud-zoom' rel="tint:'#ff0000',tintOpacity:0.5,smoothMove:5,zoomWidth:480,adjustY:-4,adjustX:10"><img src="images/smallimage-3.jpg" title="Optional Title Text" alt='' /></a>
+		</div>
+		<div class="zoom-desc">
+
+</div>
+	</div><!--zoom-section end-->
+  
+	<div class="zoom-section">
+		<div class="zoom-small-image">
+			<a href='images/bigimage04.jpg' class='cloud-zoom' rel="position:'inside',showTitle:false,adjustX:-4,adjustY:-4"><img src="images/smallimage-4.jpg" title="Your caption here" alt=''/></a>
+		</div>
+		<div class="zoom-desc">
+
+	</div>
+	</div><!--zoom-section end-->
+ 
+	<div class="zoom-section">
+		<div class="zoom-small-image">
+			<a href='images/bigimage01.jpg' class='cloud-zoom' title="Your caption here" rel="softFocus: true, position:'anypos', smoothMove:2"><img src="images/smallimage-1.jpg" alt='' /></a>
+		</div>
+		<div class="zoom-desc" style="position:relative">
+			<div id="anypos" style="position:absolute;top:-128px; left: 128px;width:356px;height:256px;"></div>
+
+	</div>
+	</div>
+</div>
+<p align="center"><a href="http://www.jqueryscript.net">http://www.jqueryscript.net</a></p>
+</body>
+</html>
